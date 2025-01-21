@@ -3,7 +3,7 @@ from .models import Cadastro
 from .serializer import CadastroSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from rest_framework.generics import ListCreateAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework import status
 
 @api_view(['GET', 'POST'])
@@ -20,6 +20,11 @@ def listar_professores(request):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
+
 class ProfessoresView(ListCreateAPIView):
+    queryset = Cadastro.objects.all()
+    serializer_class = CadastroSerializer
+
+class ProfessoresDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Cadastro.objects.all()
     serializer_class = CadastroSerializer
