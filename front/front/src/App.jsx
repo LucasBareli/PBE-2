@@ -1,31 +1,19 @@
 import React from "react";
-import "./App.css"
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import Login from "./components/login/login.jsx";
+import Home from "./components/home/home.jsx"
 
 
-export default function App(){
- 
+const App = ()=>{
   return(
-    <div className="container">
-      
-      <h1>Login</h1>
-
-      <input
-        className="caixa"
-        value={""}
-        placeholder="User"
-      />
-
-      <input
-        className="caixa"
-        value={""}
-        placeholder="Password"
-        type="password"
-      />
-
-      <button className="btn">
-        Enter
-      </button>
-
-    </div>
+  <Router>
+    <Routes>
+      <Route path="/" element={<Login />}/>
+      <Route path="/login" element={<Login />}/>
+      <Route path="/home" element={<Home />}/>
+    </Routes>
+  </Router>
   )
 }
+
+export default App
