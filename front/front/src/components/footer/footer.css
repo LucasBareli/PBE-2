@@ -1,0 +1,79 @@
+main {
+  padding-bottom: 240px;
+}
+
+.container_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  width: 100%;
+  padding: 40px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  height: 120px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+.school-info {
+  max-width: 500px;
+  text-align: left;
+}
+
+.school-info h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.school-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 5px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icons a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #5c53db;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ddd;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
