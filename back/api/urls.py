@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 from .views import listar_professores, ProfessoresView, ProfessoresDetailView
+from .views import DisciplinasView, DisciplinasAPIView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -13,4 +14,6 @@ urlpatterns = [
     path('id/<int:pk>', ProfessoresDetailView.as_view()),
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('disciplinas', DisciplinasView.as_view()),
+    path('disciplinas/<int:pk>', DisciplinasAPIView.as_view())
 ]

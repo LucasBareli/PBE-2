@@ -1,51 +1,77 @@
-.container-login{
-    display: flex;
-    width: 500px;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    height: 500px;
-    right: 800px;
-    border-radius: 15px;
-    background-color: #edf0ef;
-  }
-  
-  .caixa{
-    width: 300px;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid #b7b7b7;
-    border-radius: 5px;
-    background-color: #ddd;
-  }
-  
-  .btn{
-    width: 150px;
-    height: 40px;
-    padding: 10px;
-    background-color: #888;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+/* Container principal de login */
+.container-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; 
+  background-color: #243377; 
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
 
-  #root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
-  }
+/* Caixa do formulário */
+.caixa {
+  width: 350px;
+  padding: 15px;
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* Título do formulário */
+.container-login h1 {
+  color: #fff;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Estilo do campo de entrada (input) */
+input {
+  width: 100%;
+  padding: 8px;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f4f7fa; 
+  font-size: 1em;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Efeito de foco nos campos de entrada */
+input:focus {
+  border-color: #8ab6d6; 
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* Estilo do botão */
+.btn {
+  width: 150px;
+  height: 45px;
+  background-color: #ffff; 
+  color: #4e90c3;
+  border: none;
+  border-radius: 25px; 
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+/* Efeito de hover no botão */
+.btn:hover {
+  background-color: #4e90c3; 
+}
+
+/* Centralizando o conteúdo */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+}

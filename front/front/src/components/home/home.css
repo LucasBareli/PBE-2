@@ -16,7 +16,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px 20px; /* Espaço para evitar sobreposição com header e footer */
+    padding: 60px 20px; 
 }
 
 .container-home {
@@ -75,7 +75,7 @@ h1 {
     color: #e53e3e;
 }
 
-.footer {
+.search {
     display: flex;
     justify-content: space-between;
     align-items: center;

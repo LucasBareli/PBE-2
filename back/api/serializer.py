@@ -6,3 +6,9 @@ class CadastroSerializer(serializers.ModelSerializer):
         model = Cadastro #referencia o Model de cadastro
         many = True #lida quando queremos fazer vários registros de uma vez
         fields = '__all__' #campos que serão transformados de json para python e vice versa
+
+class DisciplinasSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Disciplinas
+        many = True
+        fields = '__all__'

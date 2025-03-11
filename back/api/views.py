@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Cadastro
-from .serializer import CadastroSerializer
+from .models import Cadastro, Disciplinas
+from .serializer import CadastroSerializer, DisciplinasSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
@@ -31,4 +31,14 @@ class ProfessoresView(ListCreateAPIView):
 class ProfessoresDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Cadastro.objects.all()
     serializer_class = CadastroSerializer
+    permission_classes = [IsAuthenticated]
+
+class DisciplinasView(ListCreateAPIView):
+    queryset = Disciplinas.objects.all()
+    serializer_class = DisciplinasSerializer
+    permission_classes = [IsAuthenticated]
+
+class DisciplinasAPIView(RetrieveUpdateDestroyAPIView):
+    queryset = Disciplinas.objects.all()
+    serializer_class = DisciplinasSerializer
     permission_classes = [IsAuthenticated]

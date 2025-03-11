@@ -96,7 +96,7 @@ export default function Home() {
                     </div>
                     <div className="btn2">
                         <FaSearch className="procurar" />
-                <div className="footer">
+                <div className="search">
                         <input
                             type="text"
                             placeholder="Buscar professor"
