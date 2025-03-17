@@ -95,12 +95,10 @@ h1 {
 }
 
 .btn1 .adicionar {
-    background-color: #48bb78;
     transition: all 0.3s ease;
 }
 
 .btn1 .adicionar:hover {
-    background-color: #38a169;
     transform: scale(1.1);
 }
 
