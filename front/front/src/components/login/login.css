@@ -1,77 +1,89 @@
-/* Container principal de login */
+/* ===== CSS do Formulário de Login ===== */
 .container-login {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 60vh; 
-  background-color: #243377; 
-  border-radius: 15px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-/* Caixa do formulário */
-.caixa {
-  width: 350px;
-  padding: 15px;
-  margin: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
   background-color: #fff;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
-}
-
-/* Título do formulário */
-.container-login h1 {
-  color: #fff;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-/* Estilo do campo de entrada (input) */
-input {
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   width: 100%;
-  padding: 8px;
+  max-width: 400px; /* Ajuste para ter mais largura */
+  min-height: 400px; /* Tamanho fixo mínimo */
+  margin: 130px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0.98;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+.caixa {
+  width: 100%;
+  padding: 14px;
   margin: 12px 0;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f4f7fa; 
-  font-size: 1em;
-  transition: border-color 0.3s ease-in-out;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border 0.3s ease, background-color 0.3s ease;
 }
 
-/* Efeito de foco nos campos de entrada */
-input:focus {
-  border-color: #8ab6d6; 
+.caixa:focus {
+  border-color: #1b4777;
   outline: none;
-  background-color: #ffffff;
+  background-color: #eaf7ff;
 }
 
-/* Estilo do botão */
 .btn {
-  width: 150px;
-  height: 45px;
-  background-color: #ffff; 
-  color: #4e90c3;
+  width: 100%;
+  padding: 14px;
+  background-color: #1c3d61;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
   border: none;
-  border-radius: 25px; 
-  font-size: 1.1em;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Efeito de hover no botão */
 .btn:hover {
-  background-color: #4e90c3; 
+  background-color: #0056b3;
+  transform: scale(1.01);
 }
 
-/* Centralizando o conteúdo */
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  justify-content: center;
+.btn:active {
+  background-color: #003f7f;
+}
+
+@media (max-width: 400px) {
+  .container-login {
+    padding: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .caixa {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
 }

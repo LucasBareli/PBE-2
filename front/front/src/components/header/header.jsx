@@ -9,6 +9,7 @@ const Header = () => {
         <a href="/">Home</a>
         <a href="/home">Professores</a>
         <a href="/disciplinas">Disciplinas</a>
+        <a href="/cursos">Cursos</a>
       </nav>
     </header>
   );

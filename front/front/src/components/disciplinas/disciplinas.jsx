@@ -70,8 +70,7 @@ export default function Disciplinas() {
 
   const criar = async (novaDisciplina) => {
     try {
-      const response = await axios.post(
-        "http://127.0.0.1:8000/api/disciplinas",
+      const response = await axios.post("http://127.0.0.1:8000/api/disciplinas",
         {
           disciplina: novaDisciplina.disciplina,
           sigla: novaDisciplina.sigla,
@@ -80,7 +79,7 @@ export default function Disciplinas() {
           carga_horaria: novaDisciplina.carga_horaria,
         },
         {
-          headers: { Authorization: `Bearer ${token}` },
+          headers: { Authorization: `Bearer ${token}` }, 
         }
       );
       setDados([...dados, response.data]);
@@ -97,9 +96,8 @@ export default function Disciplinas() {
   return (
     <div className="disciplinas-container">
       <h1>Gestão de Disciplinas</h1>
-      <div className="header">
         <button
-          className="btn adicionar"
+          className="btn-adicionar"
           onClick={() => {
             setModalOpen(true);
             setDisciplinaSelecionada(null);
@@ -114,13 +112,24 @@ export default function Disciplinas() {
           onChange={(e) => setBusca(e.target.value)}
         />
         <FaSearch />
-      </div>
       <div className="disciplinas-list">
+        <div className="table-header">
+            <div className="col-header">Matéria</div>
+            <div className="col-header">Sigla</div>
+            <div className="col-header">Disciplina</div>
+            <div className="col-header">Semestre</div>
+            <div className="col-header">Carga Horária</div>
+            <div className="col-header">Editar</div>
+            <div className="col-header">Deletar</div>
+          </div>
         {disciplinasFiltradas.length ? (
           disciplinasFiltradas.map((disciplina) => (
             <div className="disciplina-item" key={disciplina.id}>
-              <span>{disciplina.sigla}</span>
               <span>{disciplina.disciplina}</span>
+              <span>{disciplina.sigla}</span>
+              <span>{disciplina.curso}</span>
+              <span>{disciplina.semestre}</span>
+              <span>{disciplina.carga_horaria}</span>
               <button
                 className="btn edit"
                 onClick={() => {

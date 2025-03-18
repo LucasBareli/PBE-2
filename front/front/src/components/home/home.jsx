@@ -91,12 +91,14 @@ export default function Home() {
         <main className="main">
             <div className="container-home">
                 <h1>Gerenciamento de Professores</h1>
-                <div className="btn1">
+
+                <div className="search">
+                    <div className="btn1">
                         <FaPlus className="adicionar" onClick={() => { setModalOpen(true); setProfessorSelecionado(null); }} />
                     </div>
+
                     <div className="btn2">
                         <FaSearch className="procurar" />
-                <div className="search">
                         <input
                             type="text"
                             placeholder="Buscar professor"
@@ -105,38 +107,50 @@ export default function Home() {
                         />
                     </div>
                 </div>
+
                 <section className="section-home">
                     <div className="table">
+                        {/* Cabeçalho da Tabela */}
+                        <div className="table-header">
+                            <div className="col-header">Ações</div>
+                            <div className="col-header">ID</div>
+                            <div className="col-header">NI</div>
+                            <div className="col-header">Nome</div>
+                            <div className="col-header">Email</div>
+                            <div className="col-header">Celular</div>
+                            <div className="col-header">Ocupação</div>
+                        </div>
+                        
+                        {/* Dados da Tabela */}
                         {professoresFiltrados.length ? professoresFiltrados.map((professor) => (
                             <div key={professor.id} className="lista">
                                 <div className="col1">
                                     <FaEdit className="edit" onClick={() => { setModalOpen(true); setProfessorSelecionado(professor); }} />
-                                </div>
-                                <div className="col2">
                                     <FaTrash className="delete" onClick={() => apagar(professor.id)} />
                                 </div>
+                                <div className="col2">
+                                    <span>{professor.id}</span>
+                                </div>
                                 <div className="col3">
-                                    <span className="id">{professor.id}</span>
+                                    <span>{professor.ni}</span>
                                 </div>
                                 <div className="col4">
-                                    <span className="ni">{professor.ni}</span>
+                                    <span>{professor.nome}</span>
                                 </div>
                                 <div className="col5">
-                                    <span className="nome">{professor.nome}</span>
+                                    <span>{professor.email}</span>
                                 </div>
                                 <div className="col6">
-                                    <span className="email">{professor.email}</span>
+                                    <span>{professor.cel}</span>
                                 </div>
                                 <div className="col7">
-                                    <span className="cel">{professor.cel}</span>
-                                </div>
-                                <div className="col8">
-                                    <span className="ocup">{professor.ocup}</span>
+                                    <span>{professor.ocup}</span>
                                 </div>
                             </div>
                         )) : <p>Nenhum professor encontrado.</p>}
                     </div>
                 </section>
+
                 <ModalProfessores
                     isOpen={modalOpen}
                     onClose={() => setModalOpen(false)}
