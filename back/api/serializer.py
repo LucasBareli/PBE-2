@@ -12,3 +12,21 @@ class DisciplinasSerializer(serializers.ModelSerializer):
         model = Disciplinas
         many = True
         fields = '__all__'
+
+class TurmaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Turma
+        many = True
+        fields = '__all__'
+
+class CursoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Curso
+        many = True
+        fields = '__all__'
+
+class AmbienteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ambiente
+        many = True
+        fields = '__all__'
