@@ -1,10 +1,8 @@
-/* Estilo do container principal (somente para o conteúdo, sem afetar o cabeçalho) */
 .disciplinas-container {
   font-family: 'Roboto', sans-serif;
   text-align: center;
   padding: 20px;
-  margin-top: 60px; /* Ajuste de margem para dar espaço entre o cabeçalho e o conteúdo */
-  max-width: 1000px; /* Aumentar o tamanho do container */
+  margin-top: 60px; 
   width: 100%;
   margin: 20px auto;
   background-color: #FFFFFF;
@@ -33,14 +31,14 @@ h1 {
 
 .disciplina-item {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* Divide igualmente em 7 colunas */
+  grid-template-columns: repeat(7, 1fr); 
   background-color: #FFFFFF;
   margin: 15px 0;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  gap: 10px; /* Espaçamento entre as colunas */
+  gap: 10px; 
 }
 
 .disciplina-item:hover {
@@ -53,7 +51,7 @@ h1 {
   font-weight: 500;
   color: #333;
   text-align: center;
-  word-wrap: break-word; /* Garante que o texto quebre em várias linhas se for muito longo */
+  word-wrap: break-word; 
 }
 
 .edit {

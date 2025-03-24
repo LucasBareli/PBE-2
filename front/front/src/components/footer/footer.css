@@ -1,5 +1,7 @@
 /* ===== FOOTER ===== */
 .footer {
+  position: absolute;
+  bottom: 0;
   background-color: #34495e;
   color: #ecf0f1;
   text-align: center;
@@ -7,7 +9,7 @@
   font-family: 'Arial', sans-serif;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   border-top: 1px solid #7f8c8d;
-  margin-top: auto; /* Faz o footer ficar na parte inferior */
+  width: 100%;
 }
 
 .footer_title {
