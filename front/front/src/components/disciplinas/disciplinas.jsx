@@ -89,8 +89,8 @@ export default function Disciplinas() {
     }
   };
 
-  const disciplinasFiltradas = dados.filter((disciplina) =>
-    disciplina.disciplina.toLowerCase().includes(busca.toLowerCase())
+  const disciplinasFiltradas = dados.filter((disciplinas) =>
+    disciplinas.disciplina.toLowerCase().includes(busca.toLowerCase())
   );
 
   return (

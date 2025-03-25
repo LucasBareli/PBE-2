@@ -27,7 +27,7 @@ class Curso(models.Model):
 
 class Ambiente(models.Model):
     codigo = models.CharField(max_length=10)
-    sala = models.CharField(max_length=50)
+    ambiente = models.CharField(max_length=50)
     capacidade = models.FloatField()
     responsavel = models.CharField(max_length=50)
     escolhas = (
@@ -36,4 +36,4 @@ class Ambiente(models.Model):
         ('N', 'Noturno'),
         ('S', 'Sabado')
     )
-    periodo = models.CharField(max_length=50, choices=escolhas)
+    periodo = models.CharField(max_length=50, choices=escolhas, default="M")

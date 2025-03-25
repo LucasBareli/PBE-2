@@ -32,11 +32,11 @@ export default function Cursos() {
     try {
       await axios.put(`http://127.0.0.1:8000/api/cursos/${cursosAtualizados.id}`,
         {
-          codigo : codigo.cursosAtualizados,
-          curso : curso.cursosAtualizados,
-          tipo : tipo.cursosAtualizados,
-          ha : ha.cursosAtualizados,
-          sigla : sigla.cursosAtualizados
+          codigo : cursosAtualizados.codigo,
+          curso : cursosAtualizados.curso,
+          tipo : cursosAtualizados.tipo,
+          ha : cursosAtualizados.ha,
+          sigla : cursosAtualizados.sigla
         },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -72,11 +72,11 @@ export default function Cursos() {
     try {
       const response = await axios.post("http://127.0.0.1:8000/api/cursos",
         {
-            codigo : codigo.novoCurso,
-            curso : curso.novoCurso,
-            tipo : tipo.novoCurso,
-            ha : ha.novoCurso,
-            sigla : sigla.novoCurso
+            codigo : novoCurso.codigo,
+            curso : novoCurso.curso,
+            tipo : novoCurso.tipo,
+            ha : novoCurso.ha,
+            sigla : novoCurso.sigla
         },
         {
           headers: { Authorization: `Bearer ${token}` }, 

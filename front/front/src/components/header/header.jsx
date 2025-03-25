@@ -10,6 +10,8 @@ const Header = () => {
         <a href="/home">Professores</a>
         <a href="/disciplinas">Disciplinas</a>
         <a href="/cursos">Cursos</a>
+        <a href="/turmas">Turmas</a>
+        <a href="/ambientes">Ambientes</a>
       </nav>
     </header>
   );

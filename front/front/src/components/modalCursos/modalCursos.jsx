@@ -41,11 +41,11 @@ const ModalCursos = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const novoscursos = {codigo, curso, tipo, ha, sigla };
+    const novoCurso = {id, codigo, curso, tipo, ha, sigla };
     if (cursoSelecionado) {
-      atualizar({ ...cursoSelecionado, ...novoscursos });
+      atualizar({ ...cursoSelecionado, ...novoCurso });
     } else {
-      criar(novoscursos);
+      criar(novoCurso);
     }
   };
 
